@@ -2,6 +2,7 @@ import pytesseract
 pytesseract.pytesseract.tesseract_cmd=r"D:\\Program Files (x86)\\Tesseract_OCR\\tesseract.exe"
 from PIL import Image
 import os
+from Receipt_analysis.config import data_path
 
 
 # Path to the directory containing all your png receipts
