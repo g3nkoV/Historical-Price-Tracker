@@ -1,0 +1,1 @@
+Wszystkie dane osobiste, w tym dane z paragonów, zostały wyłączone z tego repozytorium z powodów prywatności.s
