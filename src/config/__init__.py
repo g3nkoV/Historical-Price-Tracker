@@ -1,0 +1,1 @@
+from .config import raw_data_folder, tesseract_cmd_path, procesed_data_folder
