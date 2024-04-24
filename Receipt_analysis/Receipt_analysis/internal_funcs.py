@@ -1,2 +1,0 @@
-# Crossowe funkcje w projekcie
-
