@@ -20,11 +20,15 @@ def open_cv_preprocess(image_path):
 
     print("Image loaded successfully")
 
-    image = get_grayscale(image)
+    # Resize the image to double its size to increase the accuracy of OCR on smaller text
+    #h, w) = image.shape[:2]
+    #image = cv2.resize(image, (w * 0.5, h * 0.5))
+
+    #image = get_grayscale(image)
     #image = remove_noise(image)
     #image = thresholding(image)
     #image = dilate(image)
-    #image = erode(image)
+    image = erode(image)
     #image = canny(image)
     #image = opening(image)
     #image = match_template(image)

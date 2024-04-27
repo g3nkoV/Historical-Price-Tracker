@@ -12,7 +12,7 @@ print(pytesseract.get_tesseract_version())
 
 text2image_path = r'D:\Program Files (x86)\Tesseract_OCR\text2image.exe'
 
-font_dir = os.path.abspath(os.path.join(project_root,'Data/tesseract_train_pol/font'))
+#font_dir = os.path.abspath(os.path.join(project_root,'Data/tesseract_train_pol/font'))
 unicharset_dir=os.path.abspath(os.path.join(project_root,'Data/tesseract_train_pol/pol.unicharset'))
 
 lines=[]
@@ -21,8 +21,8 @@ with open(training_text_file,'r',encoding='utf-8') as input_file:
     for line in input_file.readlines():
         lines.append(line.strip())
 
-output_dir = os.path.abspath(os.path.join(project_root,'Data/tesseract_train_pol/output'))
-
+#output_dir = os.path.abspath(os.path.join(project_root,'Data/tesseract_train_pol/Sometype-ground-truth'))
+output_dir = os.path.abspath(os.path.join(project_root,'tesstrain/data/Sometype-ground-truth'))
 
 if not os.path.exists(output_dir):
     os.mkdir(output_dir)
@@ -45,11 +45,6 @@ for line in lines:
 
     subprocess.run([
         text2image_path,
-        #f'--fonts_dir={font_dir}',
-        #'--font=HvDTrial Fabrikat Mono',
-        #'--font=Calibri',
-        #'--font=ElValle Medium',
-        #'--font=Elephant',
         '--font=Sometype Mono Regular',
         f'--text={line_training_text}',
         f'--outputbase={output_dir}/{file_base_name}',
